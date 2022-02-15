@@ -2,9 +2,21 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: Clone of Snowflake Raw Database
     database: raw
 
     schema: jaffle_shop
     tables:
       - name: customers
+        description: Customer Table
+        columns:
+          - name: id
+            description: PK for Customer Table
+            tests:
+              - unique
+              - not_null
+
+
       - name: orders
+        description: Order Table
+        
